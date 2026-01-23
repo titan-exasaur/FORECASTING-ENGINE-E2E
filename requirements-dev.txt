@@ -5,7 +5,9 @@ seaborn
 scikit-learn
 statsmodels
 xgboost
+black
 python-dotenv
+ipykernel
 streamlit
 plotly
 pyyaml
