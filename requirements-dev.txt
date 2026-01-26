@@ -12,3 +12,4 @@ streamlit
 plotly
 pyyaml
 joblib
+kaggle
