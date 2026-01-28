@@ -18,7 +18,7 @@ if not model_config_path:
     )
 
 model_config = load_config(model_config_path)
-params = model_config["params"]
+params = model_config["preprocessing"]
 
 
 def stationarity_check(cleansed_df: pd.DataFrame,

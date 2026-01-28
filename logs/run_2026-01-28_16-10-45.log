@@ -1,0 +1,27 @@
+[2026-01-28 16:10:49,833] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] File upload successful
+[2026-01-28 16:10:49,861] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] Data Mapping Complete
+[2026-01-28 16:10:49,868] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] Data mapping saved
+[2026-01-28 16:10:50,026] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:10:50,038] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:10:50,039] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:10:50,039] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:10:50,039] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:10:50,044] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to data/processed/preprocessed_data.csv
+[2026-01-28 16:10:53,977] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] File upload successful
+[2026-01-28 16:10:53,987] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] Data Mapping Complete
+[2026-01-28 16:10:53,988] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] Data mapping saved
+[2026-01-28 16:10:54,109] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:10:54,118] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:10:54,118] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:10:54,118] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:10:54,119] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:10:54,123] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to data/processed/preprocessed_data.csv
+[2026-01-28 16:10:55,604] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] File upload successful
+[2026-01-28 16:10:55,684] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] Data Mapping Complete
+[2026-01-28 16:10:55,731] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/ingestion.py] Data mapping saved
+[2026-01-28 16:10:55,816] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:10:55,884] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:10:55,884] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:10:55,885] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:10:55,886] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:10:55,895] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to data/processed/preprocessed_data.csv

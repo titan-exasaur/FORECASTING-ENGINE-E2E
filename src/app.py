@@ -3,6 +3,8 @@ import streamlit as st
 from forecasting_engine.data.ingestion import *
 from forecasting_engine.data.cleansing import *
 from forecasting_engine.data.preprocessing import *
+from forecasting_engine.models.sarimax_model import SARIMAXModel
+from forecasting_engine.training.splitter import time_series_split
 
 # -----------------------------------
 # 0. SETTING UP APPLICATION BASE
@@ -54,6 +56,29 @@ if file:
     preprocessed_df = data_preprocessing(cleansed_df=cleansed_df,
                                          demand_col=map_dict['demand_col'])
     st.dataframe(preprocessed_df)
+
+    st.header("MODEL TRAINING")
+    for train_idx, test_idx in time_series_split(
+            y=preprocessed_df[map_dict['demand_col']],
+            n_splits = model_config["splitting"]["n_splits"]
+        ):
+        
+        y=preprocessed_df[map_dict['demand_col']]
+
+        y_train = y.iloc[train_idx]
+        y_test = y.iloc[test_idx]
+
+        model_params = model_config["model"]["params"]
+
+        model = SARIMAXModel(
+            order=tuple(model_params["order"]),
+            seasonal_order=tuple(model_params["seasonal_order"])
+        )
+
+        model.fit(y_train)
+        preds = model.predict(steps=len(y_test))
+        st.write(preds)
+
     
 
 else:

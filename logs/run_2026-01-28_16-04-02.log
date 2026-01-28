@@ -1,0 +1,60 @@
+[2026-01-28 16:04:08,429] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:04:08,439] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:04:08,439] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:04:08,439] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:04:08,439] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:04:08,445] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:04:12,553] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:04:12,573] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:04:12,574] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:04:12,574] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:04:12,574] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:04:12,581] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:04:14,656] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:04:14,679] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:04:14,680] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:04:14,680] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:04:14,681] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:04:14,691] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:07:29,999] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:07:30,026] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:07:30,026] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:07:30,026] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:07:30,026] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:07:30,034] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:08:03,174] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:08:03,198] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:08:03,199] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:08:03,199] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:08:03,199] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:08:03,210] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:08:17,894] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:08:17,918] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:08:17,918] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:08:17,918] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:08:17,919] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:08:17,928] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:09:16,024] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:09:16,041] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:09:16,041] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:09:16,041] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:09:16,042] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:09:16,049] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:09:20,892] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:09:20,909] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:09:20,909] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:09:20,909] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:09:20,910] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:09:20,916] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:09:23,618] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:09:23,639] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:09:23,639] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:09:23,639] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:09:23,639] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:09:23,654] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
+[2026-01-28 16:10:25,177] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-28 16:10:25,192] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-28 16:10:25,193] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-28 16:10:25,193] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-28 16:10:25,193] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-28 16:10:25,202] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to config/data/processed/preprocessed_data.csv
