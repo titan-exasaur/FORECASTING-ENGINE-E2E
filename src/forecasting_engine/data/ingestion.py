@@ -1,10 +1,17 @@
+import os
 import json
 import pandas as pd
 import streamlit as st
 from typing import Dict
-
+from pathlib import Path
+from dotenv import load_dotenv
 from forecasting_engine.logger import app_logger 
+
+load_dotenv()
+
 logger = app_logger(__file__)
+
+CONFIG_PATH = Path(os.getenv("CONFIG_PATH"))
 
 
 def data_loader(file) -> pd.DataFrame:
@@ -83,11 +90,11 @@ def data_columns_mapper(raw_df: pd.DataFrame) -> Dict:
         "demand_col": demand_col
     }
 
-    logger.info('[INFO] Data Mapping Complete')
+    logger.info('Data Mapping Complete')
 
-    with open("../config/data_mapping.json", "w") as f:
+    with open(CONFIG_PATH/"data_mapping.json", "w") as f:
         json.dump(map_dict, f, indent=4)
 
-    logger.info("[INFO] Data mapping saved")
+    logger.info("Data mapping saved")
 
     return map_dict

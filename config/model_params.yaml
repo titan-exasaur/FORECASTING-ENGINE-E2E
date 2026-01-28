@@ -1,0 +1,5 @@
+params:
+  winsorising_threshold: 1.5
+  p_value_threshold: 0.05
+  minimum_length: 20
+  differencing_order: 1

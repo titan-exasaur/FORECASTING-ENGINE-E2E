@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from forecasting_engine.data.ingestion import *
 from forecasting_engine.data.cleansing import *
+from forecasting_engine.data.preprocessing import *
 
 # -----------------------------------
 # 0. SETTING UP APPLICATION BASE
@@ -49,6 +50,11 @@ if file:
     )
     st.info(f' Data continuity after imputation: {data_continuity_after}')
 
+    st.header("DATA PREPROCESSING")
+    preprocessed_df = data_preprocessing(cleansed_df=cleansed_df,
+                                         demand_col=map_dict['demand_col'])
+    st.dataframe(preprocessed_df)
+    
 
 else:
     st.error("Upload data")
