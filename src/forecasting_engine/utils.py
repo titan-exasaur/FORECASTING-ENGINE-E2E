@@ -1,5 +1,6 @@
 import os
 import yaml
+import joblib
 import pandas as pd
 from pathlib import Path
 from dotenv import load_dotenv
@@ -11,7 +12,11 @@ load_dotenv()
 logger = app_logger(__name__)
 
 DATA_PATH_ENV = os.getenv("DATA_PATH")
+if not DATA_PATH_ENV:
+    raise EnvironmentError("DATA_PATH not set in environment")
+
 DATA_PATH = Path(DATA_PATH_ENV)
+
 
 def load_config(yaml_path: str) -> dict:
     """
@@ -117,7 +122,6 @@ def raw_data_saver(raw_df: pd.DataFrame) -> None:
 
     logger.info(f"Raw data saved successfully at {raw_data_path}")
 
-
 def processed_data_saver(processed_df: pd.DataFrame) -> None:
     """
     Saves the user uploaded data as a CSV into data/processed using RUN_ID.
@@ -141,3 +145,28 @@ def processed_data_saver(processed_df: pd.DataFrame) -> None:
     processed_df.to_csv(processed_data_path, index=False)
 
     logger.info(f"Processed data saved successfully at {processed_data_path}")
+
+
+def model_saver(model) -> None:
+    """
+    Saves the trained model to artifacts/models using RUN_ID.
+    """
+
+    if model is None:
+        raise ValueError("Model is empty; pass a trained model")
+
+    run_id = os.getenv("RUN_ID")
+    if not run_id:
+        raise EnvironmentError("RUN_ID not set in environment")
+
+    artifacts_path = os.getenv("ARTIFACTS_PATH")
+    if not artifacts_path:
+        raise EnvironmentError("ARTIFACTS_PATH not set in environment")
+
+    model_dir = Path(artifacts_path) / "models" / run_id
+    model_dir.mkdir(parents=True, exist_ok=True)
+
+    model_path = model_dir / "model.joblib"
+    joblib.dump(model, model_path)
+
+    logger.info(f"Model saved successfully at {model_path}")

@@ -18,8 +18,8 @@ st.title("📈 FORECASTING ENGINE")
 if "RUN_ID" not in os.environ:
     os.environ["RUN_ID"] = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-logger = app_logger(__name__)
-
+logger = app_logger("forecasting_engine")
+logger.info("Application started")
 
 # -----------------------------------
 # 1. DATA INGESTION

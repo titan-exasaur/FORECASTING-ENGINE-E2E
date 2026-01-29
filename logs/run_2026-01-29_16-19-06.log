@@ -1,0 +1,12 @@
+[2026-01-29 16:19:06,444] [INFO] [forecasting_engine.data.preprocessing] Logger initialized | run_id=2026-01-29_16-19-06
+[2026-01-29 16:19:06,453] [INFO] [forecasting_engine.training.evaluator] Logger initialized | run_id=2026-01-29_16-19-06
+[2026-01-29 16:19:06,564] [INFO] [forecasting_engine.training.splitter] Logger initialized | run_id=2026-01-29_16-19-06
+[2026-01-29 16:19:06,567] [INFO] [__main__] Logger initialized | run_id=2026-01-29_16-19-06
+[2026-01-29 16:19:10,306] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:19:10,313] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:19:10,314] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:19:10,314] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:19:10,318] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:19:10,318] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:19:11,725] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:19:11,804] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}

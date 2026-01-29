@@ -1,4 +1,11 @@
 template.py
 forecast-venv/
 .env
+
+# Data artifacts
 data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class

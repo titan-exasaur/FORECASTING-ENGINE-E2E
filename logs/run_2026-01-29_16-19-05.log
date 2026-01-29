@@ -1,0 +1,9 @@
+[2026-01-29 16:19:05,940] [INFO] [forecasting_engine.utils] Logger initialized | run_id=2026-01-29_16-19-05
+[2026-01-29 16:19:05,947] [INFO] [forecasting_engine.data.ingestion] Logger initialized | run_id=2026-01-29_16-19-05
+[2026-01-29 16:19:05,950] [INFO] [forecasting_engine.data.cleansing] Logger initialized | run_id=2026-01-29_16-19-05
+[2026-01-29 16:19:06,446] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:19:10,157] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:19:10,172] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-19-06.csv
+[2026-01-29 16:19:10,197] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:19:10,200] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:19:10,318] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-19-06.csv

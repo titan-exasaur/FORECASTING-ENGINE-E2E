@@ -1,6 +1,6 @@
 {
     "datetime_col": "DATE",
-    "datetime_format": "DD-MM-YYYY",
-    "frequency": "daily",
+    "datetime_format": "YYYY-MM-DD",
+    "frequency": "hourly",
     "demand_col": "IPG2211A2N"
 }

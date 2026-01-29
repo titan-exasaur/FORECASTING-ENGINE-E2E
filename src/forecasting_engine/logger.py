@@ -44,6 +44,9 @@ def app_logger(name: str) -> logging.Logger:
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
-    logger.info(f"Logger initialized | run_id={run_id}")
+    logger.propagate = False
 
+    run_id = os.getenv("RUN_ID", "unknown")
+    logger.info(f"Logger initialized | run_id={run_id}")
+    
     return logger
