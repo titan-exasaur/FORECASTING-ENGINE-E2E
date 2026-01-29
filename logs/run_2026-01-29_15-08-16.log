@@ -1,0 +1,24 @@
+[2026-01-29 15:08:20,192] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 15:08:20,206] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-29 15:08:20,206] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-29 15:08:20,206] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-29 15:08:20,207] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-29 15:08:20,213] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to data/processed/preprocessed_data.csv
+[2026-01-29 15:08:21,648] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/training/splitter.py] Data splitted into train-test partitions
+[2026-01-29 15:08:21,796] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/training/evaluator.py] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 15:08:27,376] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 15:08:27,384] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-29 15:08:27,384] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-29 15:08:27,384] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-29 15:08:27,384] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-29 15:08:27,387] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to data/processed/preprocessed_data.csv
+[2026-01-29 15:08:28,656] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/training/splitter.py] Data splitted into train-test partitions
+[2026-01-29 15:08:28,685] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/training/evaluator.py] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 15:08:32,358] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 15:08:32,369] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] ADF Statistic: -2.256990350047235
+[2026-01-29 15:08:32,369] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] p-value: 0.1862146911658712
+[2026-01-29 15:08:32,369] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Series is non-stationary, differencing is needed
+[2026-01-29 15:08:32,369] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Created column: IPG2211A2N_diff using first-order differencing
+[2026-01-29 15:08:32,374] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/data/preprocessing.py] Preprocessed data saved to data/processed/preprocessed_data.csv
+[2026-01-29 15:08:33,731] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/training/splitter.py] Data splitted into train-test partitions
+[2026-01-29 15:08:33,756] [INFO] [/home/mtng/projects/FORECASTING-ENGINE/src/forecasting_engine/training/evaluator.py] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
