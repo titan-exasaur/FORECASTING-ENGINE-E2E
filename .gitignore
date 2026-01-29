@@ -1,3 +1,4 @@
 template.py
 forecast-venv/
 .env
+data/
