@@ -3,8 +3,9 @@ import streamlit as st
 from forecasting_engine.data.ingestion import *
 from forecasting_engine.data.cleansing import *
 from forecasting_engine.data.preprocessing import *
-from forecasting_engine.models.sarimax_model import SARIMAXModel
-from forecasting_engine.training.splitter import time_series_split
+from forecasting_engine.utils import plot_actual_vs_forecast
+from forecasting_engine.training.trainer import model_trainer
+from forecasting_engine.training.evaluator import model_evaluator
 
 # -----------------------------------
 # 0. SETTING UP APPLICATION BASE
@@ -28,7 +29,7 @@ if file:
 
     st.header("DATA MAPPING")
     map_dict = data_columns_mapper(raw_df)
-    st.write(map_dict)
+    # st.write(map_dict)
 
     st.header("DATA CLEANSING")
     cleansed_df = data_cleanser(raw_df,
@@ -58,26 +59,45 @@ if file:
     st.dataframe(preprocessed_df)
 
     st.header("MODEL TRAINING")
-    for train_idx, test_idx in time_series_split(
-            y=preprocessed_df[map_dict['demand_col']],
-            n_splits = model_config["splitting"]["n_splits"]
-        ):
-        
-        y=preprocessed_df[map_dict['demand_col']]
+    best_model, y_test, preds, score = model_trainer(
+        preprocessed_df=preprocessed_df,
+        model_config=model_config,
+        map_dict=map_dict
+    )
 
-        y_train = y.iloc[train_idx]
-        y_test = y.iloc[test_idx]
+    results_df = pd.DataFrame({
+        "Actual": y_test.values,
+        "Forecast": preds.values
+    })
+    st.dataframe(results_df)
 
-        model_params = model_config["model"]["params"]
 
-        model = SARIMAXModel(
-            order=tuple(model_params["order"]),
-            seasonal_order=tuple(model_params["seasonal_order"])
-        )
+    st.subheader("📊 Actual vs Forecast")
+    plot_df = results_df.copy()
+    plot_df = preprocessed_df.loc[y_test.index, [
+        map_dict['datetime_col']
+    ]].copy()
 
-        model.fit(y_train)
-        preds = model.predict(steps=len(y_test))
-        st.write(preds)
+    plot_df["Actual"] = y_test.values
+    plot_df["Forecast"] = preds.values
+    fig = plot_actual_vs_forecast(
+        df=plot_df,
+        datetime_col=map_dict['datetime_col'],
+        actual_col="Actual",
+        forecast_col="Forecast"
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+
+
+    st.subheader("MODEL EVALUATION")
+    mae, rmse, wmape = model_evaluator(y_true=results_df['Actual'],
+                                         y_pred=results_df['Forecast'])
+    st.error(f"MEAN ABSOLUTE ERROR: {round(mae, 2)}")
+    st.info(f"ROOT MEAN SQUARED ERROR: {round(rmse, 2)}")
+    st.warning(f"WEIGHTED MEAN ABSOLUTE PERCENTAGE ERROR: {round(wmape, 2)}%")
+
 
     
 
