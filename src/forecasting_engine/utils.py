@@ -146,7 +146,6 @@ def processed_data_saver(processed_df: pd.DataFrame) -> None:
 
     logger.info(f"Processed data saved successfully at {processed_data_path}")
 
-
 def model_saver(model) -> None:
     """
     Saves the trained model to artifacts/models using RUN_ID.
@@ -170,3 +169,29 @@ def model_saver(model) -> None:
     joblib.dump(model, model_path)
 
     logger.info(f"Model saved successfully at {model_path}")
+
+def model_loader():
+    """
+    Loads a trained model from artifacts/models/<run_id>/model.joblib
+    """
+    run_id = os.getenv("RUN_ID")
+    if not run_id:
+        raise EnvironmentError("RUN_ID not set in environment")
+
+    artifacts_path = os.getenv("ARTIFACTS_PATH")
+    if not artifacts_path:
+        raise EnvironmentError("ARTIFACTS_PATH not set in environment")
+
+    model_dir = Path(artifacts_path) / "models" / run_id
+    if not model_dir.exists():
+        raise FileNotFoundError(f"Model directory not found: {model_dir}")
+
+    model_path = model_dir / "model.joblib"
+    if not model_path.exists():
+        raise FileNotFoundError(f"Model file not found: {model_path}")
+
+    model = joblib.load(model_path)
+
+    logger.info(f"Model loaded successfully from {model_path}")
+
+    return model

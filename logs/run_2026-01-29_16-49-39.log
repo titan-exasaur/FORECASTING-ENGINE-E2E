@@ -1,0 +1,169 @@
+[2026-01-29 16:49:39,324] [INFO] [forecasting_engine.utils] Logger initialized | run_id=unknown
+[2026-01-29 16:49:39,326] [INFO] [forecasting_engine.data.ingestion] Logger initialized | run_id=unknown
+[2026-01-29 16:49:39,327] [INFO] [forecasting_engine.data.cleansing] Logger initialized | run_id=unknown
+[2026-01-29 16:49:39,718] [INFO] [forecasting_engine.data.preprocessing] Logger initialized | run_id=unknown
+[2026-01-29 16:49:39,719] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:49:39,723] [INFO] [forecasting_engine.training.evaluator] Logger initialized | run_id=unknown
+[2026-01-29 16:49:39,791] [INFO] [forecasting_engine.training.splitter] Logger initialized | run_id=unknown
+[2026-01-29 16:49:39,874] [INFO] [forecasting_engine] Logger initialized | run_id=2026-01-29_16-49-39
+[2026-01-29 16:49:39,874] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:49:42,684] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:49:42,687] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:49:42,694] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:49:42,710] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:49:42,713] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:49:42,813] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:49:42,821] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:49:42,821] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:49:42,821] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:49:42,826] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:49:42,827] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:49:42,827] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:49:44,205] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:49:44,244] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:49:44,331] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:49:48,441] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:49:48,443] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:49:48,448] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:49:48,454] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:49:48,455] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:49:48,511] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:49:48,515] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:49:48,517] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:49:48,527] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:49:48,542] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:49:48,546] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:49:48,564] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:49:48,564] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:49:48,565] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:49:48,570] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:49:48,570] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:49:48,571] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:49:48,698] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:49:48,704] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:49:48,705] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:49:48,705] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:49:48,708] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:49:48,709] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:49:48,709] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:49:50,037] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:49:50,070] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:49:50,094] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:49:50,116] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:22,026] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:50:22,048] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:50:22,051] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:50:22,059] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:22,073] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:50:22,077] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:50:22,175] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:50:22,193] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:50:22,194] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:50:22,194] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:50:22,202] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:22,203] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:50:22,203] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:50:23,624] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:50:23,661] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:23,684] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:50:23,705] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:39,430] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:50:39,458] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:50:39,461] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:50:39,474] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:39,489] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:50:39,491] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:50:39,568] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:50:39,577] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:50:39,577] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:50:39,578] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:50:39,583] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:39,584] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:50:39,584] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:50:40,961] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:50:40,993] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:41,015] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:50:41,047] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:47,389] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:50:47,391] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:50:47,395] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:47,400] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:50:47,402] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:50:47,440] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:50:47,448] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:50:47,449] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:50:47,449] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:50:47,452] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:47,453] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:50:47,453] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:50:48,767] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:50:48,802] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:48,825] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:50:48,862] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:57,150] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:50:57,152] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:50:57,156] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:57,162] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:50:57,163] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:50:57,221] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:50:57,254] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:50:57,254] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:50:57,254] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:50:57,262] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:50:57,263] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:50:57,263] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:50:58,562] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:50:58,599] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:50:58,624] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:50:58,659] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:51:32,812] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:51:32,827] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:51:32,831] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:51:32,838] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:51:32,851] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:51:32,853] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:51:32,908] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:51:32,922] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:51:32,922] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:51:32,923] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:51:32,930] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:51:32,931] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:51:32,931] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:51:34,276] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:51:34,317] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:51:34,345] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:51:34,386] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:51:58,963] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:51:58,980] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:51:58,982] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:51:58,987] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:51:58,999] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:51:59,000] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:51:59,065] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:51:59,077] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:51:59,077] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:51:59,077] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:51:59,083] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:51:59,083] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:51:59,084] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:52:00,437] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:52:00,475] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:52:00,499] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:52:00,527] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:52:20,071] [INFO] [forecasting_engine.utils] Loaded config from config/model_params.yaml
+[2026-01-29 16:52:20,105] [INFO] [forecasting_engine] Application started
+[2026-01-29 16:52:20,106] [INFO] [forecasting_engine.data.ingestion] File upload successful
+[2026-01-29 16:52:20,113] [INFO] [forecasting_engine.utils] Raw data saved successfully at data/raw/2026-01-29_16-49-39.csv
+[2026-01-29 16:52:20,117] [INFO] [forecasting_engine.data.ingestion] Data Mapping Complete
+[2026-01-29 16:52:20,118] [INFO] [forecasting_engine.data.ingestion] Data mapping saved
+[2026-01-29 16:52:20,147] [INFO] [forecasting_engine.data.preprocessing] Winsorized 0 values using bounds [41.98, 135.65]
+[2026-01-29 16:52:20,156] [INFO] [forecasting_engine.data.preprocessing] ADF Statistic: -2.256990350047235
+[2026-01-29 16:52:20,157] [INFO] [forecasting_engine.data.preprocessing] p-value: 0.1862146911658712
+[2026-01-29 16:52:20,157] [INFO] [forecasting_engine.data.preprocessing] Series is non-stationary, differencing is needed
+[2026-01-29 16:52:20,161] [INFO] [forecasting_engine.utils] Processed data saved successfully at data/processed/2026-01-29_16-49-39.csv
+[2026-01-29 16:52:20,162] [INFO] [forecasting_engine.data.preprocessing] Preprocessing summary | winsor_threshold=1.5, stationary=False, differencing_order=1, rows_out=396
+[2026-01-29 16:52:20,162] [INFO] [forecasting_engine.data.preprocessing] Quantiles | Q1=77.11, Q3=100.52, IQR=23.42
+[2026-01-29 16:52:21,431] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:52:21,473] [INFO] [forecasting_engine.utils] Model saved successfully at artifacts/models/2026-01-29_16-49-39/model.joblib
+[2026-01-29 16:52:21,496] [INFO] [forecasting_engine.training.evaluator] Model evaluation complete. Metrics: {'mae': np.float64(2.450496677109707), 'rmse': np.float64(2.9391236754867323), 'wmape': np.float64(2.8779209978787534)}
+[2026-01-29 16:52:21,520] [INFO] [forecasting_engine.utils] Model loaded successfully from artifacts/models/2026-01-29_16-49-39/model.joblib

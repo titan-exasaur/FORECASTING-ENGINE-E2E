@@ -9,6 +9,7 @@ from forecasting_engine.data.cleansing import *
 from forecasting_engine.data.preprocessing import *
 from forecasting_engine.training.trainer import model_trainer
 from forecasting_engine.training.evaluator import model_evaluator
+from forecasting_engine.inference.predictor import generate_forecast_plot_df
 
 # -----------------------------------
 # 0. SETTING UP APPLICATION BASE
@@ -73,6 +74,7 @@ if file:
         model_config=model_config,
         map_dict=map_dict
     )
+    model_saver(best_model)
 
     results_df = pd.DataFrame({
         "Actual": y_test.values,
@@ -96,7 +98,7 @@ if file:
         forecast_col="Forecast"
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 
 
@@ -106,6 +108,31 @@ if file:
     st.error(f"MEAN ABSOLUTE ERROR: {round(mae, 2)}")
     st.info(f"ROOT MEAN SQUARED ERROR: {round(rmse, 2)}")
     st.warning(f"WEIGHTED MEAN ABSOLUTE PERCENTAGE ERROR: {round(wmape, 2)}%")
+
+    st.subheader("MODEL INFERENCE")
+    window_size = st.slider("Enter window size: ", 
+                                  min_value=round(len(y_test)/2),
+                                  max_value=len(y_test),
+                                  value=0)
+    if window_size:
+        combined_df = generate_forecast_plot_df(
+            plot_df=plot_df,
+            preprocessed_df=preprocessed_df,
+            y_test_index=y_test.index,
+            datetime_col=map_dict['datetime_col'],
+            frequency=map_dict['frequency'],
+            window_size=window_size
+        )
+
+        fig = plot_actual_vs_forecast(
+            df=combined_df,
+            datetime_col=map_dict['datetime_col'],
+            actual_col="Actual",
+            forecast_col="Forecast",
+            title="Actuals + Forecast Horizon"
+        )
+
+        st.plotly_chart(fig, width='stretch')
 
 
     
