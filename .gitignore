@@ -9,3 +9,7 @@ data/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Runtime / Generated Artifacts
+artifacts/*
+logs/*
