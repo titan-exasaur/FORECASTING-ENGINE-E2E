@@ -1,5 +1,8 @@
+import os
 import pandas as pd
 import streamlit as st
+from datetime import datetime
+from forecasting_engine.logger import app_logger
 from forecasting_engine.data.ingestion import *
 from forecasting_engine.data.cleansing import *
 from forecasting_engine.data.preprocessing import *
@@ -11,6 +14,11 @@ from forecasting_engine.training.evaluator import model_evaluator
 # 0. SETTING UP APPLICATION BASE
 # -----------------------------------
 st.title("📈 FORECASTING ENGINE")
+
+if "RUN_ID" not in os.environ:
+    os.environ["RUN_ID"] = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+logger = app_logger(__file__)
 
 
 # -----------------------------------
