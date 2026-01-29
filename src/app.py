@@ -2,11 +2,11 @@ import os
 import pandas as pd
 import streamlit as st
 from datetime import datetime
+from forecasting_engine.utils import *
 from forecasting_engine.logger import app_logger
 from forecasting_engine.data.ingestion import *
 from forecasting_engine.data.cleansing import *
 from forecasting_engine.data.preprocessing import *
-from forecasting_engine.utils import plot_actual_vs_forecast
 from forecasting_engine.training.trainer import model_trainer
 from forecasting_engine.training.evaluator import model_evaluator
 
@@ -18,7 +18,7 @@ st.title("📈 FORECASTING ENGINE")
 if "RUN_ID" not in os.environ:
     os.environ["RUN_ID"] = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-logger = app_logger(__file__)
+logger = app_logger(__name__)
 
 
 # -----------------------------------
@@ -31,6 +31,7 @@ file = st.file_uploader(
 )
 if file:
     raw_df = data_loader(file)
+    raw_data_saver(raw_df)
 
     st.header("DATA PREVIEW")
     st.dataframe(raw_df)

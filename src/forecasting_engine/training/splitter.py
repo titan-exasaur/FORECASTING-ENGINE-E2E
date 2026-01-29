@@ -2,7 +2,7 @@ import pandas as pd
 from forecasting_engine.logger import app_logger
 from sklearn.model_selection import TimeSeriesSplit
 
-logger = app_logger(__file__)
+logger = app_logger(__name__)
 
 def time_series_split(
     y: pd.Series,

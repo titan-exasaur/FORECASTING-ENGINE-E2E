@@ -1,0 +1,5 @@
+[2026-01-29 16:02:06,357] [INFO] [forecasting_engine.training.splitter] Logger initialized | run_id=2026-01-29_16-02-06
+[2026-01-29 16:02:06,359] [INFO] [__main__] Logger initialized | run_id=2026-01-29_16-02-06
+[2026-01-29 16:02:10,624] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:02:13,846] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions
+[2026-01-29 16:02:15,257] [INFO] [forecasting_engine.training.splitter] Data splitted into train-test partitions

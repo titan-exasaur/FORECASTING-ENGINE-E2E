@@ -4,13 +4,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 from statsmodels.tsa.stattools import adfuller
 from forecasting_engine.logger import app_logger 
-from forecasting_engine.utils import load_config
+from forecasting_engine.utils import load_config, processed_data_saver
 
 load_dotenv()
 
-logger = app_logger(__file__)
+logger = app_logger(__name__)
 
-DATA_PATH = Path(os.getenv("DATA_PATH"))
 model_config_path = os.getenv("MODEL_CONFIG_PATH")
 if not model_config_path:
     raise ValueError(
@@ -18,7 +17,11 @@ if not model_config_path:
     )
 
 model_config = load_config(model_config_path)
-params = model_config["preprocessing"]
+params = model_config.get("preprocessing", {})
+
+min_len = params.get("minimum_length", 20)
+p_thresh = params.get("p_value_threshold", 0.05)
+winsor_thresh = params.get("winsorising_threshold", 1.5)
 
 
 def stationarity_check(cleansed_df: pd.DataFrame,
@@ -35,15 +38,20 @@ def stationarity_check(cleansed_df: pd.DataFrame,
     """
     
     ts = cleansed_df[demand_col].dropna()
-    if len(ts) < params['minimum_length']:
+    if len(ts) < min_len:
         logger.warning("Time series too short for ADF test, skipping differencing")
         return True
 
-    result = adfuller(ts)
+    try:
+        result = adfuller(ts)
+    except ValueError as e:
+        logger.warning(f"ADF test failed: {e}. Treating series as stationary.")
+        return True
+
     logger.info(f"ADF Statistic: {result[0]}")
     logger.info(f"p-value: {result[1]}")
 
-    if result[1] > params['p_value_threshold']:
+    if result[1] > p_thresh:
         logger.info("Series is non-stationary, differencing is needed")
         return False
     else:
@@ -72,7 +80,7 @@ def data_preprocessing(cleansed_df: pd.DataFrame,
     q3 = preprocessed_df[demand_col].quantile(0.75)
     iqr = q3 - q1
 
-    threshold = params['winsorising_threshold']
+    threshold = winsor_thresh
     lower_bound = q1 - threshold * iqr
     upper_bound = q3 + threshold * iqr
 
@@ -95,11 +103,10 @@ def data_preprocessing(cleansed_df: pd.DataFrame,
     is_stationary = stationarity_check(preprocessed_df, demand_col)
 
     # --- Differencing ---
+    order = 0  # default
+
     if not is_stationary:
-        logger.info(f"Created column: {demand_col}_diff using first-order differencing")
-        
         order = params.get("differencing_order", 1)
-        
         preprocessed_df[f"{demand_col}_diff"] = (
             preprocessed_df[demand_col].diff(order)
         )
@@ -107,14 +114,21 @@ def data_preprocessing(cleansed_df: pd.DataFrame,
     else:
         preprocessed_df[f"{demand_col}_diff"] = preprocessed_df[demand_col]
 
-    # saving processed data
-    output_dir = DATA_PATH / "processed"
-    output_dir.mkdir(parents=True, exist_ok=True)
 
-    output_path = output_dir / "preprocessed_data.csv"
-    preprocessed_df.to_csv(output_path, index=False)
+    processed_data_saver(preprocessed_df)
 
-    logger.info(f"Preprocessed data saved to {output_path}")
+    logger.info(
+        f"Preprocessing summary | "
+        f"winsor_threshold={winsor_thresh}, "
+        f"stationary={is_stationary}, "
+        f"differencing_order={order if not is_stationary else 0}, "
+        f"rows_out={len(preprocessed_df)}"
+    )
+
+    logger.info(
+        f"Quantiles | Q1={q1:.2f}, Q3={q3:.2f}, IQR={iqr:.2f}"
+    )
+
 
     return preprocessed_df
 

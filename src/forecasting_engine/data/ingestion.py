@@ -9,7 +9,7 @@ from forecasting_engine.logger import app_logger
 
 load_dotenv()
 
-logger = app_logger(__file__)
+logger = app_logger(__name__)
 
 CONFIG_PATH = Path(os.getenv("CONFIG_PATH"))
 

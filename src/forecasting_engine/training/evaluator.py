@@ -1,7 +1,7 @@
 import numpy as np
 from forecasting_engine.logger import app_logger
 
-logger = app_logger(__file__)
+logger = app_logger(__name__)
 
 
 def rmse(y_true, y_pred):

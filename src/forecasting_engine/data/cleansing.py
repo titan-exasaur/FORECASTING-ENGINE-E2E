@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 from forecasting_engine.logger import app_logger 
-logger = app_logger(__file__)
+logger = app_logger(__name__)
 
 def data_cleanser(raw_df: pd.DataFrame,
                    datetime_col: str,
