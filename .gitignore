@@ -13,3 +13,6 @@ __pycache__/
 # Runtime / Generated Artifacts
 artifacts/*
 logs/*
+
+# pem keys
+forecasting-e2e.pem

@@ -1,120 +1,213 @@
 # 📈 Forecasting Engine
 
-## Objective
+A **general-purpose time series forecasting engine** that ingests user
+data and automatically produces reliable forecasts with evaluation and
+interactive visualizations --- deployed using **Docker + AWS EC2** and
+accessible over the internet via **Streamlit**.
 
-Build a **general-purpose time series forecasting engine** that can ingest user data and automatically produce reliable forecasts with visualization and evaluation.
+------------------------------------------------------------------------
 
-The engine is designed to:
-- Accept **any dataset** with a datetime column and demand/target column
-- Handle multiple **frequencies** (hourly, daily, weekly, monthly, quarterly, yearly)
-- Perform robust **data cleansing, continuity checks, and imputation**
-- Train multiple forecasting models and automatically select the **best-performing model**
-- Generate **interactive visualizations** and evaluation metrics
+## 🚀 Live Deployment
 
----
+The application is fully containerized and deployed:
 
-## Key Inputs
+-   🐳 Dockerized application
+-   📦 Image pushed to **Docker Hub**
+-   ☁️ Pulled and run on **AWS EC2**
+-   🌍 Publicly accessible via browser
+-   ⚡ Powered by **Streamlit**
 
-- Datetime column (user-mapped)
-- Datetime format (user-selected)
-- Demand / target column
-- Data frequency
-- Forecast horizon
+------------------------------------------------------------------------
 
----
+## 🎯 Objective
 
-## Data Processing Pipeline
+Build a **plug-and-play forecasting engine** that:
 
-1. **Data Ingestion**
-   - CSV / Excel / Parquet upload via Streamlit
+-   Accepts **any dataset** with a datetime column and target column
+-   Handles multiple **frequencies** (hourly, daily, weekly, monthly,
+    quarterly, yearly)
+-   Performs **data cleansing, continuity checks, and imputation**
+-   Trains forecasting models and selects the **best-performing model**
+-   Produces **interactive visualizations** and evaluation metrics
 
-2. **Column Mapping**
-   - User maps datetime and demand columns
-   - Frequency selection
+------------------------------------------------------------------------
 
-3. **Data Cleansing**
-   - Datetime coercion
-   - NaN / NaT handling
-   - Duplicate removal
-   - Negative demand handling
+## 🧾 Key Inputs
 
-4. **Continuity Check**
-   - Detects missing timestamps based on frequency
+-   Datetime column (user-mapped)
+-   Datetime format (user-selected)
+-   Target / demand column
+-   Data frequency
+-   Forecast horizon
 
-5. **Temporal Imputation**
-   - Reindexing to a complete datetime grid
-   - Missing demand filled (default: zero-fill)
+------------------------------------------------------------------------
 
-6. **Data Preprocessing**
-   - Outlier handling (Winsorization / capping)
-   - Stationarity check (ADF test)
-   - Differencing (if required)
+## 🔄 Data Processing Pipeline
 
----
+1.  **Data Ingestion**
+    -   CSV / Excel / Parquet upload via Streamlit
+2.  **Column Mapping**
+    -   User maps datetime and target columns
+    -   Frequency selection
+3.  **Data Cleansing**
+    -   Datetime coercion
+    -   NaN / NaT handling
+    -   Duplicate removal
+    -   Negative value handling
+4.  **Continuity Check**
+    -   Detects missing timestamps based on frequency
+5.  **Temporal Imputation**
+    -   Reindexing to a complete datetime grid
+    -   Missing values filled (default: zero-fill)
+6.  **Preprocessing**
+    -   Outlier handling (Winsorization / capping)
+    -   Stationarity check (ADF test)
+    -   Differencing (if required)
 
-## Modeling Strategy
+------------------------------------------------------------------------
 
-- Modular model architecture with a common base interface
-- Initial models:
-  - SARIMAX
-- Planned:
-  - Prophet
-  - Gradient Boosting / ML models
+## 🤖 Modeling Strategy
 
-### Model Evaluation
-Models are evaluated using:
-- RMSE
-- MAE
-- WMAPE
+-   Modular model architecture with a common interface
+-   Current models:
+    -   SARIMAX
+-   Planned:
+    -   Prophet
+    -   Gradient Boosting / ML models
 
-The best-performing model is automatically selected.
+### 📏 Model Evaluation Metrics
 
----
+-   RMSE
+-   MAE
+-   WMAPE
 
-## Data Splitting Strategy
+The best-performing model is selected automatically.
 
-- Time-series–aware cross-validation
-- Uses rolling splits (`TimeSeriesSplit`)
-- Preserves temporal ordering
+------------------------------------------------------------------------
 
----
+## 📊 Data Splitting Strategy
 
-## Visualization
+-   Time-series--aware cross-validation
+-   Rolling splits using `TimeSeriesSplit`
+-   Preserves temporal ordering
 
-- Interactive **Plotly** charts
-- Actual vs Forecast comparison
-- Forecast confidence intervals (planned)
-- Clean, production-ready UI via Streamlit
+------------------------------------------------------------------------
 
----
+## 📈 Visualization
 
-## Current Status
+-   Interactive **Plotly** charts
+-   Actual vs Forecast comparison
+-   Model evaluation metrics view
+-   Clean UI built with **Streamlit**
 
-✅ Data ingestion and mapping  
-✅ Datetime parsing and frequency handling  
-✅ Data cleansing and validation  
-✅ Continuity checks and imputation  
-✅ Preprocessing (winsorization + differencing)  
-🚧 Model training and selection  
-🚧 Forecast evaluation metrics  
-🚧 Plotly visualization  
-🚧 Deployment (Docker + AWS)
+------------------------------------------------------------------------
 
----
+## 🖼️ Application Screenshots
 
-## Tech Stack
+### 1️⃣ Data Upload
 
-- Python
-- Pandas, NumPy
-- Statsmodels
-- Scikit-learn
-- Plotly
-- Streamlit
-- Docker (planned)
-- AWS EC2 + S3 (planned)
+![Data Upload](assets/images/1_data_upload.png)
 
----
+### 2️⃣ Actual vs Forecast
 
-## Vision
+![Actual vs Forecast](assets/images/2_actual_vs_forecast.png)
 
-A **plug-and-play forecasting engine** usable across domains with minimal configuration, strong statistical guarantees, and production-grade extensibility.
+### 3️⃣ Model Evaluation
+
+![Model Evaluation](assets/images/3_model_evaluation.png)
+
+------------------------------------------------------------------------
+
+## 🐳 Docker Usage
+
+### 🔧 Build Image (Local)
+
+``` bash
+docker build -t titanexasaur/forecasting .
+```
+
+### ▶️ Run Locally
+
+``` bash
+docker run -p 8888:8501 titanexasaur/forecasting
+```
+
+Then open:
+
+``` text
+http://localhost:8888
+```
+
+------------------------------------------------------------------------
+
+## ☁️ AWS EC2 Deployment
+
+### 1️⃣ SSH into EC2
+
+``` bash
+ssh -i forecasting-e2e.pem ec2-user@<EC2-PUBLIC-IP>
+```
+
+### 2️⃣ Pull Image from Docker Hub
+
+``` bash
+docker pull titanexasaur/forecasting
+```
+
+### 3️⃣ Run Container
+
+``` bash
+docker run -d -p 8501:8501 --name forecasting_engine titanexasaur/forecasting
+```
+
+### 4️⃣ Check Running Container
+
+``` bash
+docker ps
+```
+
+### 5️⃣ Access in Browser
+
+``` text
+http://<EC2-PUBLIC-IP>:8501
+```
+
+------------------------------------------------------------------------
+
+## 🛑 Stop & Remove Container (EC2)
+
+``` bash
+docker stop forecasting_engine
+docker rm forecasting_engine
+```
+
+------------------------------------------------------------------------
+
+## 🛠 Tech Stack
+
+-   Python
+-   Pandas, NumPy
+-   Statsmodels
+-   Scikit-learn
+-   Plotly
+-   Streamlit
+-   Docker
+-   AWS EC2
+
+------------------------------------------------------------------------
+
+## 📦 Deployment Flow
+
+1.  Build Docker image locally
+2.  Push image to Docker Hub
+3.  Pull image on AWS EC2
+4.  Run container exposing Streamlit port
+5.  Access app via EC2 Public IP
+
+------------------------------------------------------------------------
+
+## 🌟 Vision
+
+A **production-ready, extensible forecasting engine** usable across
+domains with minimal configuration, strong statistical foundations, and
+cloud-native deployment.
