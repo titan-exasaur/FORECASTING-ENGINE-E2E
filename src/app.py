@@ -66,9 +66,10 @@ if file:
     st.header("DATA PREPROCESSING")
     preprocessed_df = data_preprocessing(cleansed_df=cleansed_df,
                                          demand_col=map_dict['demand_col'])
-    st.dataframe(preprocessed_df)
+    st.info("Data preprocessing complete")
 
     st.header("MODEL TRAINING")
+    st.info("Model training started")
     best_model, y_test, preds, score = model_trainer(
         preprocessed_df=preprocessed_df,
         model_config=model_config,
@@ -80,10 +81,9 @@ if file:
         "Actual": y_test.values,
         "Forecast": preds.values
     })
-    st.dataframe(results_df)
+    st.success("Model training complete")
 
 
-    st.subheader("📊 Actual vs Forecast")
     plot_df = results_df.copy()
     plot_df = preprocessed_df.loc[y_test.index, [
         map_dict['datetime_col']

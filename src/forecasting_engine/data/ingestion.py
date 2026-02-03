@@ -45,32 +45,6 @@ def data_columns_mapper(raw_df: pd.DataFrame) -> Dict:
         options=df_cols
     )
 
-    DATETIME_FORMATS = [
-    "YYYY-MM-DD",
-    "DD-MM-YYYY",
-    "MM-DD-YYYY",
-    "YYYY/MM/DD",
-    "DD/MM/YYYY",
-    "MM/DD/YYYY",
-
-    "YYYY-MM-DD HH:MM",
-    "YYYY-MM-DD HH:MM:SS",
-    "DD-MM-YYYY HH:MM",
-    "DD-MM-YYYY HH:MM:SS",
-    "MM/DD/YYYY HH:MM",
-    "MM/DD/YYYY HH:MM:SS",
-
-    "ISO 8601 (YYYY-MM-DDTHH:MM:SS)",
-    "ISO 8601 with TZ (YYYY-MM-DDTHH:MM:SSZ)",
-
-    "YYYYMMDD",
-    "YYYYMMDDHH"]
-
-    datetime_format = st.selectbox(
-        label="Select format of the datetime column",
-        options=DATETIME_FORMATS
-    )
-
     remaining_cols = [c for c in df_cols if c != datetime_col]
 
     demand_col = st.selectbox(
@@ -85,7 +59,6 @@ def data_columns_mapper(raw_df: pd.DataFrame) -> Dict:
 
     map_dict = {
         "datetime_col": datetime_col,
-        "datetime_format": datetime_format,
         'frequency': frequency,
         "demand_col": demand_col
     }
