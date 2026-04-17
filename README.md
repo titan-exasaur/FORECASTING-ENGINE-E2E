@@ -5,7 +5,13 @@ data and automatically produces reliable forecasts with evaluation and
 interactive visualizations --- deployed using **Docker + AWS EC2** and
 accessible over the internet via **Streamlit**.
 
-------------------------------------------------------------------------
+
+## 🔧 System Design
+### Architecture Diagram
+![Architecture Diagram](assets/images/4_architecture_diagram.png)
+
+### Sequence Diagram
+![Sequence Diagram](assets/images/5_sequence_diagram.png)
 
 ## 🚀 Live Deployment
 
@@ -19,7 +25,7 @@ The application is fully containerized and deployed:
 
 ------------------------------------------------------------------------
 
-## 🎯 Objective
+## 🎯 Objectives
 
 Build a **plug-and-play forecasting engine** that:
 
